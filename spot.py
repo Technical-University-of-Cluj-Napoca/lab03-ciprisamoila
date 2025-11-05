@@ -149,7 +149,7 @@ class Spot:
             win (pygame.Surface): The Pygame surface (window) where the spot will be drawn.
         """
         # draw a rectangle at (x, y) with size (width, width) and color self.color
-        pygame.draw.rect(win, self.color, (self.x, self.y, self.width, self.width))
+        pygame.draw.rect(win, self.color, (MARGIN + self.x, MARGIN + self.y, self.width, self.width))
 
     def update_neighbors(self, grid: list[list["Spot"]]) -> None:
         """
